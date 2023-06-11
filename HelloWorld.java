@@ -6,6 +6,8 @@ public class HelloWorld {
 		
 		Dog dog = new Dog();
 		dog.color = "Black";
+		dog.setName("Max");
+		System.out.println(dog.getName());
 		
 	}
 

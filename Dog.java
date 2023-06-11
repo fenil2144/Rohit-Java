@@ -15,9 +15,12 @@ public class Dog{
 		int a = 10;
 	}
 	
+	
+	//Default Constructor
 	public Dog() {
 	}
 	
+	//Parameterized Constructor
 	public Dog(String name1) {
 		this();
 		this.name = name1;
@@ -28,6 +31,25 @@ public class Dog{
 		this.breed = breed;
 	}
 	
+	
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = "Pet-"+name;
+	}
+
+	public String getBreed() {
+		return breed;
+	}
+
+	public void setBreed(String breed) {
+		this.breed = breed;
+	}
+	
+
 	public static void main(String[] args) {
 		
 		Dog dog = new Dog();
@@ -85,6 +107,17 @@ public class Dog{
 		for(int i=0;i<10;i++) {
 			System.out.println(i);
 		}
+		System.out.println("While Loop");
+		int i = 11;
+		while(i<10) {
+			System.out.println(i);
+			i++;
+		}
+		System.out.println("Do While Loop");
+		i=11;
+		do {
+			System.out.println(i);
+		}while(i<10);
 		
 		
 	}
