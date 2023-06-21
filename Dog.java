@@ -1,5 +1,3 @@
-import AnotherPackage.Cat;
-
 public class Dog{
 	
 	//Identity
@@ -12,7 +10,19 @@ public class Dog{
 	
 	private void bark() {
 		System.out.println("I am barking");
-		int a = 10;
+		final int a = 10;
+//		a = 30; -- Not Allowed
+		final int b;
+		b = 20;
+//		b=30; 
+	}
+	
+	public static void walk() {
+		System.out.println("I am Walking!");
+	}
+	
+	static{
+		country=0;
 	}
 	
 	
@@ -59,6 +69,10 @@ public class Dog{
 		dog.breed = "Labra";
 		dog.color = "Grey";
 		dog.bark();
+		dog.
+		
+//		bark();
+		walk();
 		
 		Dog dogWithNameObj = new Dog("Max","Labra");
 		System.out.println(dogWithNameObj.name+" "+dogWithNameObj.breed);
@@ -119,7 +133,26 @@ public class Dog{
 			System.out.println(i);
 		}while(i<10);
 		
+		//Nested Class Code
+		Dog.NestedClass nestedClassObj = dog.new NestedClass();
+		nestedClassObj.display();
+		
+		//Static Nested Class
+		Dog.StaticNestedClass staticNestedObject = new Dog.StaticNestedClass();
+		staticNestedObject.display();
+		
 		
 	}
+	
+	 class NestedClass{
+		void display() {
+			System.out.println("I am display Method Inside Nested Class");
+		}
+	}
+	 
+	 static class StaticNestedClass{
+			void display() {
+				System.out.println("I am display Method Inside Static Nested Class");
+			}	 }
 
 }

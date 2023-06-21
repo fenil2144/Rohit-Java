@@ -30,6 +30,9 @@ public class InheritanceExample {
 		dogAnimalObj.walk();
 		dogAnimalObj.bark();
 		System.out.println("Name: "+dogAnimalObj.name);
+		
+		Animal animalObj = new Animal();
+		System.out.println(animalObj.getClass());
 	}
 	
 
