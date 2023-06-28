@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
+import java.util.Vector;
 
 public class CollectionExample {
 	
@@ -18,6 +20,11 @@ public class CollectionExample {
 		
 		integerList.set(0, 1);
 		System.out.println(integerList);
+		
+		Vector<Integer> integerVector = new Vector<Integer>();
+		
+		Stack<Integer> integerStack = new Stack<>();
+		
 
 	}
 
