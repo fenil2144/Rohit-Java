@@ -1,24 +1,27 @@
+import java.sql.SQLException;
 
 public class ExceptionDemo {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 		computeDivison(10);
 	}
 	
-	public static int computeDivison(int number) {
+	public static int computeDivison(int number) throws SQLException{
 		try {
 			int x = 100/number;
 			System.out.println("X = "+x);
-
+			
+			if(x==10)
+				throw new UserNotFoundException("User Not Found!");
+				
 		}
 		catch(ArithmeticException e) {
 			System.out.println("ArithmeticException - "+e.getMessage());
 		}catch(NullPointerException e) {
 			System.out.println(e.getMessage());
 		}
-		catch(Exception e) {
-			System.out.println("Parent Exception Class "+e.getMessage());
-		}finally {
+		finally {
+			
 			System.out.println("Finally Block!");
 		}
 		System.out.println("Rest of the Code");
