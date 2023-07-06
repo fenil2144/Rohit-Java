@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Stack;
 import java.util.Vector;
@@ -25,6 +26,14 @@ public class CollectionExample {
 		
 		Stack<Integer> integerStack = new Stack<>();
 		
+		Iterator<Integer> iteratorObj = integerList.iterator();
+		while(iteratorObj.hasNext()) {
+			System.out.println(iteratorObj.next());
+		}
+		
+		for(Integer x : integerList) {
+			System.out.println(x);
+		}
 
 	}
 
