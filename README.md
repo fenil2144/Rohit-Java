@@ -1,2 +1,2 @@
 # Rohit-Java
-This is repository for personal 1:1 training
+This is repository is for personal 1:1 training
